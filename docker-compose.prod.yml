@@ -867,9 +867,6 @@ networks:
   trinity-platform:
     driver: bridge
     name: trinity-platform-network
-    ipam:
-      config:
-        - subnet: 172.29.0.0/16
   # Agent-facing network: agents, frontend, plus the bridges that need to reach
   # them (backend, mcp-server, otel-collector, cloudflared). Name preserved so
   # the three agent-creation sites in services/agent_service/* and
@@ -877,6 +874,3 @@ networks:
   trinity-agent:
     driver: bridge
     name: trinity-agent-network
-    ipam:
-      config:
-        - subnet: 172.28.0.0/16
